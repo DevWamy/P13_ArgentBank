@@ -1,0 +1,41 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+
+    .nav_logo {
+        display: flex;
+        align-items: center;
+        margin-left: 50px;
+
+        .nav_logo_image {
+            max-width: 100%;
+            width: 200px;
+        }
+    }
+
+    .nav_item {
+        text-decoration: none;
+        margin-right: 0.5rem;
+        display: flex;
+        align-items: center;
+
+        span {
+            margin-right: 10px;
+            font-weight: 700;
+        }
+        .fa {
+            margin-right: 5px;
+        }
+    }
+
+    .nav_item:hover {
+        text-decoration: underline;
+    }
+
+    a {
+        font-weight: bold;
+        color: #2c3e50;
+    }
+}
