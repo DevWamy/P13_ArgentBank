@@ -1,12 +1,13 @@
 import React from 'react';
-import { home } from './routes';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { home, login } from './routes';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import LoginPage from './pages/LoginPage';
 import reportWebVitals from './reportWebVitals';
-import './index.scss';
+import './style/index.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +16,7 @@ root.render(
             <Header />
             <Routes>
                 <Route exact path={home} element={<Home />} />
+                <Route path={login} element={<LoginPage />} />
             </Routes>
             <Footer />
         </BrowserRouter>

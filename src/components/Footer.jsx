@@ -1,5 +1,4 @@
 import React from 'react';
-import '../style/components/_footer.scss';
 
 /**
  * Creation of the footer
