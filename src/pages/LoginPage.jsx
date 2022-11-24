@@ -1,7 +1,6 @@
 import React from 'react';
 import LoginForm from '../components/LoginForm';
 import { FaUserCircle } from 'react-icons/fa';
-import '../style/pages/_loginPage.scss';
 
 /**
  * Display the login page with the login form

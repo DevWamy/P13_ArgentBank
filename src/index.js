@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { home, login } from './routes';
+import { home, login, profil } from './routes';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
+import ProfilPage from './pages/ProfilPage';
 import reportWebVitals from './reportWebVitals';
 import './style/index.scss';
 
@@ -17,6 +18,7 @@ root.render(
             <Routes>
                 <Route exact path={home} element={<Home />} />
                 <Route path={login} element={<LoginPage />} />
+                <Route path={profil} element={<ProfilPage />} />
             </Routes>
             <Footer />
         </BrowserRouter>

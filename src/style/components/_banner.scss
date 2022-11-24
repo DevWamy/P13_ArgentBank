@@ -7,6 +7,7 @@
 
     @media screen and (min-width: 920px) {
         height: 400px;
+        background-position: 0% 33%;
     }
 
     .heroImg {
@@ -44,7 +45,7 @@
         }
 
         .text {
-            margin-top: 15px;
+            margin-bottom: 0;
             font-size: 0.9rem;
 
             @media screen and (min-width: 920px) {
