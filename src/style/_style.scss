@@ -1,17 +1,14 @@
-// * {
-//     margin: 0;
-//     padding: 0;
-//     list-style-type: none;
-// }
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
 
-// #root {
-//     display: flex;
-//     flex-direction: column;
-//     min-height: 100vh;
-//     font-family: $font-1;
-//     text-align: center;
-//     color: #2c3e50;
-// }
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 $font-1: Avenir, Helvetica, Arial, sans-serif;
 
@@ -47,9 +44,10 @@ body {
     background-color: $color-1;
 }
 
-.bgLight {
-    background-color: $color-2;
-}
+// .bgLight {
+//     background-color: $color-2;
+// }
+
 .whiteTitle {
     margin-top: 0;
     padding-top: 0.67em;

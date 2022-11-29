@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
 import ProfilPage from './pages/ProfilPage';
+
 import reportWebVitals from './reportWebVitals';
 import './style/index.scss';
 

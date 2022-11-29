@@ -1,5 +1,4 @@
 import React from 'react';
-import image from '../img/bank-tree.jpeg';
 
 /**
  * Creation of the home banner with an image and desciption
@@ -9,7 +8,6 @@ import image from '../img/bank-tree.jpeg';
 const Banner = () => {
     return (
         <div className="hero">
-            <img className="heroImg" src={image} alt="banner" />
             <section className="heroContent">
                 <p className="subtitle">No fees.</p>
                 <p className="subtitle">No minimum deposit.</p>
