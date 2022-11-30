@@ -3,7 +3,7 @@ import LoginForm from '../components/LoginForm';
 import { FaUserCircle } from 'react-icons/fa';
 
 /**
- * Display the login page with the login form
+ * Display the login page with the login form.
  *
  * @returns {JSX.Element} LoginPage component
  */

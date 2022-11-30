@@ -1,9 +1,14 @@
 import React from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { authActions } from '../store/authSlice';
 
 /**
- * Creation of the login form for the signIn page
+ * Creation of the login form for the signIn page.
+ * @params useSelector allows to be linked to a state present in the store, the component will be notified at each modification of the state to be re-rendered.
+ * @params useDispatch returns a dispatch function allowing actions to be dispatched to the store's reducer.
+ * @params dispatch takes the action as a parameter. This is returned by the execution of the corresponding function.
  *
  * @returns {JSX.Element} LoginForm component
  */
@@ -11,6 +16,7 @@ import { useNavigate } from 'react-router-dom';
 const LoginForm = () => {
     const API_URL = 'http://localhost:3001/api/v1/user/';
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -18,23 +24,35 @@ const LoginForm = () => {
         const email = form.querySelector('#email').value;
         const password = form.querySelector('#password').value;
 
+        // requete post pour envoyer le mail et mdp
         axios
             .post(API_URL + 'login', {
+                // l'api attend un email et un password on lui passe ceux des champs du formulaire
                 email,
                 password,
             })
             .then((response) => {
-                if (response.data.body) {
-                    localStorage.setItem('user', JSON.stringify(response.data));
-                    console.log('success');
+                // modifie les autorisations avec le token
+                axios.defaults.headers['Authorization'] = `Bearer ${response.data.body.token}`;
+
+                // on met le token en localstorage
+                localStorage.setItem('userToken', response.data.body.token);
+
+                // requete pour récuperer les données de l'utilisateur
+                axios.post('http://localhost:3001/api/v1/user/profile').then((response) => {
+                    // on appelle la fonction "login" le l'user reducer
+                    dispatch(authActions.login(response.data.body));
+
+                    // on redirige sur la page profil
                     navigate('/ProfilPage');
-                }
-                //else {
-                //     <div className="error">
-                //         <h1>ERREUR</h1>
-                //         <h2> Nom d'utilisateur ou mot de passe incorrect!</h2>
-                //     </div>;
-                // }
+
+                    // if (response.data.body) {
+                    //     localStorage.setItem('user', JSON.stringify(response.data));
+                    //     console.log('success');
+                    //     navigate('/ProfilPage');
+                    // }
+                    console.log('Voici le token: ' + localStorage.userToken);
+                });
             });
     };
 
@@ -53,7 +71,7 @@ const LoginForm = () => {
                     <input type="checkbox" id="remember-me" />
                     <label htmlFor="remember-me">Remember me</label>
                 </div>
-                <button className="signInButton" type="submit">
+                <button className="signInButton" type="submit" onClick={() => dispatch(authActions.login())}>
                     Sign In
                 </button>
             </form>
