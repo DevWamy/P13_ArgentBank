@@ -15,11 +15,11 @@ import { createSlice } from '@reduxjs/toolkit';
 export const token = localStorage.getItem('userToken') ? localStorage.getItem('userToken') : null;
 
 const initialState = {
-    firstName: 'null',
-    lastName: 'null',
-    token,
-    email: 'null',
-    password: 'null',
+    firstName: null,
+    lastName: null,
+    token: null,
+    email: null,
+    password: null,
     // remember: false, //A gerer plus tard
     isAuth: false,
     // isError: null, //A gerer plus tard
@@ -33,8 +33,16 @@ const authSlice = createSlice({
             state.email = action.payload.email;
             state.firstName = action.payload.firstName;
             state.lastName = action.payload.lastName;
+        },
+
+        setToken(state, action) {
+            state.token = action.payload.token;
             state.isAuth = true;
-            state.token = token;
+        },
+
+        updateUser(state, action) {
+            state.firstName = action.payload.firstName;
+            state.lastName = action.payload.lastName;
         },
         logout(state) {
             state.email = null;

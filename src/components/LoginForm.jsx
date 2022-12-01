@@ -35,12 +35,12 @@ const LoginForm = () => {
                 // modifie les autorisations avec le token
                 axios.defaults.headers['Authorization'] = `Bearer ${response.data.body.token}`;
 
-                // on met le token en localstorage
-                localStorage.setItem('userToken', response.data.body.token);
+                // on met le token dans le localstorage
+                dispatch(authActions.setToken(response.data.body));
 
                 // requete pour récuperer les données de l'utilisateur
                 axios.post('http://localhost:3001/api/v1/user/profile').then((response) => {
-                    // on appelle la fonction "login" le l'user reducer
+                    // on appelle la fonction "login" du user reducer
                     dispatch(authActions.login(response.data.body));
 
                     // on redirige sur la page profil
@@ -53,6 +53,9 @@ const LoginForm = () => {
                     // }
                     console.log('Voici le token: ' + localStorage.userToken);
                 });
+            })
+            .catch((err) => {
+                alert(err.response.data.message);
             });
     };
 

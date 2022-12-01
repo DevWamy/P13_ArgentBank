@@ -12,9 +12,7 @@ import authReducer from './authSlice';
  */
 
 const store = configureStore({
-    reducer: {
-        authSection: authReducer,
-    },
+    reducer: authReducer,
 });
 
 export default store;

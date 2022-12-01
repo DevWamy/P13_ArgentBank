@@ -1,4 +1,6 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+// import store from '../store/';
 import AccountItem from '../components/AccountItem';
 
 /**
@@ -7,12 +9,23 @@ import AccountItem from '../components/AccountItem';
  * @returns {JSX.Element} Profile component
  */
 const Profil = () => {
+    const firstName = useSelector((state) => {
+        console.log(state);
+        return state.firstName.charAt(0).toUpperCase() + state.firstName.slice(1);
+    });
+
+    const lastName = useSelector((state) => state.lastName.charAt(0).toUpperCase() + state.lastName.slice(1));
+
+    console.log(firstName);
+
     return (
         <div className="main bgDark">
             <div className="accountHeader">
                 <h1 className="whiteTitle">Welcome back</h1>
                 <div>
-                    <h2 className="whiteTitle">Tony Jarvis !</h2>
+                    <h2 className="whiteTitle">
+                        {firstName} {lastName} !
+                    </h2>
                     <button className="editButton">Edit Name</button>
                 </div>
             </div>
