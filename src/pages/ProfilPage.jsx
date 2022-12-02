@@ -1,33 +1,34 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-// import store from '../store/';
 import AccountItem from '../components/AccountItem';
 
 /**
- * Display the profile page with account elements and access to edit form
+ * Display the profile page with account elements and access to edit form.
+ * @params useSelector allows to extract data from the state of the store, using a selection function.
+Used here to extract datas that are in the first and last name state.
+ * @params charAt toUpperCase is used to have the first letter of the name and first name capitalized.
  *
  * @returns {JSX.Element} Profile component
  */
 const Profil = () => {
-    const firstName = useSelector((state) => {
-        console.log(state);
-        return state.firstName.charAt(0).toUpperCase() + state.firstName.slice(1);
-    });
+    const firstName = useSelector(
+        (state) => state.firstName.charAt(0).toUpperCase() + state.firstName.slice(1),
+    );
 
     const lastName = useSelector((state) => state.lastName.charAt(0).toUpperCase() + state.lastName.slice(1));
 
     console.log(firstName);
+    console.log(lastName);
 
     return (
         <div className="main bgDark">
             <div className="accountHeader">
-                <h1 className="whiteTitle">Welcome back</h1>
-                <div>
-                    <h2 className="whiteTitle">
-                        {firstName} {lastName} !
-                    </h2>
-                    <button className="editButton">Edit Name</button>
-                </div>
+                <h1>
+                    Welcome back
+                    <br />
+                    {firstName} {lastName}!
+                </h1>
+                <button className="editButton">Edit Name</button>
             </div>
             <h2 className="sr-only">Accounts</h2>
             <AccountItem

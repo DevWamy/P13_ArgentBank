@@ -22,7 +22,6 @@ const initialState = {
     password: null,
     // remember: false, //A gerer plus tard
     isAuth: false,
-    // isError: null, //A gerer plus tard
 };
 
 const authSlice = createSlice({

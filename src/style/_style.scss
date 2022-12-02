@@ -48,16 +48,13 @@ body {
 //     background-color: $color-2;
 // }
 
-.whiteTitle {
-    margin-top: 0;
-    padding-top: 0.67em;
-    font-size: 2em;
-    color: white;
-}
-
 .accountHeader {
     color: #fff;
     margin-bottom: 2rem;
+
+    h1 {
+        margin: 2rem;
+    }
 }
 
 .editButton {
