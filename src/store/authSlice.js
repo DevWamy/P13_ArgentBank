@@ -41,6 +41,7 @@ const authSlice = createSlice({
             state.firstName = action.payload.firstName;
             state.lastName = action.payload.lastName;
         },
+
         logout(state) {
             state.email = null;
             state.firstName = null;

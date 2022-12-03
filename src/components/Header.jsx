@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { FaUserCircle, FaSignOutAlt } from 'react-icons/fa';
+import { authActions } from '../store/authSlice';
 import logo from '../img/argentBankLogo.png';
 
 /**
@@ -12,6 +13,14 @@ import logo from '../img/argentBankLogo.png';
 
 const Header = () => {
     const firstName = useSelector((state) => state.firstName);
+
+    // fonction logout
+    const handleLogout = () => {
+        const dispatch = useDispatch;
+
+        // On appelle la fonction du reducer "logout" qui passera les données user à null
+        dispatch(authActions.logout());
+    };
 
     return (
         <div className="nav">
@@ -29,7 +38,7 @@ const Header = () => {
                             </span>
                         </div>
                     </NavLink>
-                    <NavLink to="/" className="nav_link">
+                    <NavLink to="/" className="nav_link" onClick={handleLogout}>
                         <div>
                             <FaSignOutAlt className="go" />
                             Sign Out
