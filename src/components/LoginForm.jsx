@@ -27,15 +27,15 @@ const LoginForm = () => {
         // requete post pour envoyer le mail et mdp
         axios
             .post(API_URL + 'login', {
-                // l'api attend un email et un password on lui passe ceux des champs du formulaire
+                // L'api attend un email et un password on lui passe ceux des champs du formulaire
                 email,
                 password,
             })
             .then((response) => {
-                // modifie les autorisations avec le token
+                // On modifie les autorisations avec le token.
                 axios.defaults.headers['Authorization'] = `Bearer ${response.data.body.token}`;
 
-                // on met le token dans le localstorage
+                // On récupère le token
                 dispatch(authActions.setToken(response.data.body));
 
                 // requete pour récuperer les données de l'utilisateur
@@ -46,11 +46,7 @@ const LoginForm = () => {
                     // on redirige sur la page profil
                     navigate('/ProfilPage');
 
-                    // if (response.data.body) {
-                    //     localStorage.setItem('user', JSON.stringify(response.data));
-                    //     console.log('success');
-                    //     navigate('/ProfilPage');
-                    // }
+                    //On affiche le token
                     console.log('Voici le token: ' + localStorage.userToken);
                 });
             })
