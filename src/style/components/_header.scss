@@ -33,9 +33,18 @@
         .fa {
             margin-right: 5px;
         }
+        .go {
+            font-size: 18px;
+            margin-right: 5px;
+        }
     }
 
-    .nav_item:hover {
+    .nav_link {
+        text-decoration: none;
+        margin-right: 0.5rem;
+    }
+
+    .nav_link:hover {
         text-decoration: underline;
     }
 }

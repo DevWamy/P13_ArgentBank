@@ -12,8 +12,6 @@ import { createSlice } from '@reduxjs/toolkit';
  * @returns {JSX.Element}  authentification managment
  */
 
-export const token = localStorage.getItem('userToken') ? localStorage.getItem('userToken') : null;
-
 const initialState = {
     firstName: null,
     lastName: null,
@@ -48,7 +46,6 @@ const authSlice = createSlice({
             state.firstName = null;
             state.lastName = null;
             state.isAuth = false;
-            localStorage.removeItem('userToken');
         },
     },
 });
