@@ -1,6 +1,7 @@
+/**
+ * This element lists and exports all the routes necessary for the proper functioning of the application.
+ */
+
 export const home = '/';
 export const login = '/loginPage';
 export const profil = '/ProfilPage';
-// export const error = '*';
-/* Route dynamique pour aller sur une page specifique. */
-// export const housing = '/housing/:houseId';

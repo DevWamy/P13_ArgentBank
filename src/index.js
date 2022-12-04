@@ -13,6 +13,15 @@ import store from './store';
 import reportWebVitals from './reportWebVitals';
 import './style/index.scss';
 
+/**
+ * Architecture and rendering of the application.
+ * There are also all the routes necessary for the proper functioning of the application.
+ * They are nested in the supplier element and in which the store is called.
+ * This store has all the states and actions necessary for this application.
+ *
+ * @returns {JSX.Element} Application
+ */
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>

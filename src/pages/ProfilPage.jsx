@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
 import { authActions } from '../store/authSlice';
 import AccountItem from '../components/AccountItem';
 
@@ -9,13 +10,30 @@ import AccountItem from '../components/AccountItem';
  * Display the profile page with account elements and access to edit form.
  * @params useSelector allows to extract data from the state of the store, using a selection function.
  * Used here to extract datas that are in the first and last name state.
+ * @params useDispatch returns a dispatch function allowing actions to be dispatched to the store's reducer.
+ * @params useState is used to store data.
+ * @params authActions is needed for the various slice actions that are in the store.
+//  * @params navigate is used for navigate to other pages.
+ * @params e.preventDefault removes the default behavior of the element in which it is called.
+ * @params axios is used to do some requests.
  * @params charAt toUpperCase is used to have the first letter of the name and first name capitalized.
  *
  * @returns {JSX.Element} Profile component
  */
 const Profil = () => {
-    const dispatch = useDispatch();
     // const navigate = useNavigate();
+    const dispatch = useDispatch();
+
+    // //On récupère le token
+    // const token = useSelector((state) => state.setToken);
+
+    // // si il n'y à pas de token = pas d'user => on redirige verse la page login
+    // useEffect(() => {
+    //     if (!token) {
+    //         navigate('/login');
+    //     }
+    //     navigate('/ProfilPage');
+    // }, [token, navigate]);
 
     //Edition du formulaire
     const [editNameForm, setEditNameForm] = useState(false);

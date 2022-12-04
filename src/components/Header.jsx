@@ -6,7 +6,13 @@ import { authActions } from '../store/authSlice';
 import logo from '../img/argentBankLogo.png';
 
 /**
- * A REVOIR
+ * Creation of a navigation component that includes the logo and navigation links.
+ *
+ * @params navLink allows to navigate through links.
+ * @params useSelector allows to be linked to a state present in the store, the component will be notified at each modification of the state to be re-rendered.
+ * @params useDispatch returns a dispatch function allowing actions to be dispatched to the store's reducer.
+ * @params dispatch takes the action as a parameter. This is returned by the execution of the corresponding function.
+ * @params authActions is needed for the various slice actions that are in the store.
  *
  * @returns {JSX.Element} Navigation component
  */

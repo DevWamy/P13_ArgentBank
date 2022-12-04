@@ -9,6 +9,10 @@ import { authActions } from '../store/authSlice';
  * @params useSelector allows to be linked to a state present in the store, the component will be notified at each modification of the state to be re-rendered.
  * @params useDispatch returns a dispatch function allowing actions to be dispatched to the store's reducer.
  * @params dispatch takes the action as a parameter. This is returned by the execution of the corresponding function.
+ * @params authActions is needed for the various slice actions that are in the store.
+ * @params navigate is used for navigate to other pages.
+ * @params e.preventDefault removes the default behavior of the element in which it is called.
+ * @params axios is used to do some requests.
  *
  * @returns {JSX.Element} LoginForm component
  */
