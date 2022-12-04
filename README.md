@@ -1,4 +1,5 @@
-![logo](src/assets/logo.png)
+![logo](src/img/argentBankLogo.png)
+
 
 
 - ![Author](https://img.shields.io/badge/Author-Nadia%20Bolivant-blue)
