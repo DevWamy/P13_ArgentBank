@@ -84,4 +84,4 @@ It will allow you to run the application on http://localhost:3000
 
 ## Backend
 
-[Link to backend repository](https://github.com/DevWamy/P12_SportSee_Backend)
+[Link to backend repository](https://github.com/DevWamy/Project-10-Bank-API)
