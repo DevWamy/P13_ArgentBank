@@ -67,6 +67,8 @@ It will allow you to run the application on http://localhost:3000
 ### Added dependencies
 
 - ![GitHub package.json dependency version (prod)](https://img.shields.io/npm/v/react?color=blueviolet&label=react)
+- ![GitHub package.json dependency version (prod)]
+(https://img.shields.io/github/package-json/dependency-version/DevWamy/P13_ArgentBank/react-router-dom?color=purple)
 
 
 
