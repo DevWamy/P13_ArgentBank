@@ -11,7 +11,7 @@
 
 ### General information
 
-This repository contains all the source code to run the SportSee sports analytics dashboard application.
+This repository contains all the source code to run the ArgentBank banking application to manage its accounts.
 
 ## Prerequisites
 
