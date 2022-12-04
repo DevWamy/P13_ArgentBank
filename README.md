@@ -15,10 +15,9 @@ This repository contains all the source code to run the ArgentBank banking appli
 
 ## Prerequisites
 
-- [NodeJS (**version 16.17.0**)](https://nodejs.org/en/)
+- [NodeJS < v.16](https://nodejs.org/en/)
 - [NPM (**version 8.15.0**)](https://www.npmjs.com/)
-- [REACT (**version 18.2.0**)](https://en.reactjs.org/) is recommanded to run charts correctly
-- [RECHARTS (**version 2.1.15**)](https://recharts.org/en-US/)
+- [REACT (**version 18.2.0**)](https://en.reactjs.org/) 
 - [VSCODE (**version 1.73.1**)](https://code.visualstudio.com/)
 
 If you are working with several versions of NodeJS, we recommend you install [nvm](https://github.com/nvm-sh/nvm). This tool will allow you to easily manage your NodeJS versions.
@@ -31,7 +30,7 @@ If you are working with several versions of NodeJS, we recommend you install [nv
 - Fork and clone the repository on your computer.
 
 ````bash
-git clone https://github.com/DevWamy/P12_SportSee.git
+git clone https://github.com/DevWamy/P13_ArgentBank.git
 ````
 
 - Package installations after cloning.
@@ -42,42 +41,37 @@ npm install
 # with Yarn
 yarn
 ```
+- Install and run MongoDb
+
+
 - Start the application
  
-```bash
+
 For backend :
 open a new terminal and run `cd BackEnd` command,
-npm run start
-# or
-npm start
-# with Yarn
-yarn dev
-the backend will open http://localhost:3000
-```
+then run npm run dev:server `npm run dev:server`command 
 
-```bash
+then open another new terminal and run `cd BackEnd` command,
+then run `npm run populate-db`
+
+the backend will open http://localhost:3001
+
+
 For frontEnd :
-open a new terminal,
-npm run start
-# or
-npm start
-# with Yarn
-yarn start 
-will allow you to run the application on http://localhost:3001
- ```
+open a new terminal, `cd FrontEnd` then run the `npm start`
+or `npm start` or `yarn start ` with Yarn .
+
+It will allow you to run the application on http://localhost:3000
+ 
 
 ### Added dependencies
 
 - ![GitHub package.json dependency version (prod)](https://img.shields.io/npm/v/react?color=blueviolet&label=react)
-- ![GitHub package.json dependency version (prod)](https://img.shields.io/npm/v/recharts?color=ff64b2&label=recharts)
-- ![GitHub package.json dependency version (prod)](https://img.shields.io/npm/v/prop-types?color=blueviolet&label=prop-types)
 
----
-dev dependencies:
 
-- ![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/npm/v/sass?color=ff64b2&label=sass)
-- ![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/npm/v/prettier?color=blueviolet&label=prettier)
-- ![GitHub package.json dependency version (dev dep on branch)](https://img.shields.io/npm/v/eslint?color=ff64b2&label=eslint)
+
+
+
 
 ## Backend
 
