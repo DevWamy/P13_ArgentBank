@@ -4,6 +4,11 @@
     align-items: center;
     padding: 5px 20px;
 
+    a {
+        font-weight: bold;
+        color: #2c3e50;
+    }
+
     .nav_logo {
         display: flex;
         align-items: center;
@@ -28,14 +33,18 @@
         .fa {
             margin-right: 5px;
         }
+        .go {
+            font-size: 18px;
+            margin-right: 5px;
+        }
     }
 
-    .nav_item:hover {
+    .nav_link {
+        text-decoration: none;
+        margin-right: 0.5rem;
+    }
+
+    .nav_link:hover {
         text-decoration: underline;
-    }
-
-    a {
-        font-weight: bold;
-        color: #2c3e50;
     }
 }

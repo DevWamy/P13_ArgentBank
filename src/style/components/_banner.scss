@@ -1,19 +1,16 @@
 .hero {
+    background-image: url('../../img/bank-tree.jpeg');
     background-position: 0 -50px;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 300px;
+    height: 400px;
     position: relative;
 
     @media screen and (min-width: 920px) {
-        height: 400px;
-    }
-
-    .heroImg {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        object-position: 0 -10rem;
+        .hero {
+            height: 400px;
+            background-position: 0% 33%;
+        }
     }
 
     .heroContent {
@@ -44,7 +41,7 @@
         }
 
         .text {
-            margin-top: 15px;
+            margin-bottom: 0;
             font-size: 0.9rem;
 
             @media screen and (min-width: 920px) {
