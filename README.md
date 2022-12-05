@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+![logo](src/img/argentBankLogo.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+- ![Author](https://img.shields.io/badge/Author-Nadia%20Bolivant-blue)
+- ![GitHub repo size](https://img.shields.io/github/repo-size/DevWamy/P13_ArgentBank?color=blueviolet)
+- ![GitHub top language](https://img.shields.io/github/languages/top/DevWamy/P13_ArgentBank?color=ff64b2)
+- ![GitHub language count](https://img.shields.io/github/languages/count/DevWamy/P13_ArgentBank?color=blueviolet)
 
-### `npm start`
+## Frontend
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### General information
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This repository contains all the source code to run the ArgentBank banking application to manage its accounts.
 
-### `npm test`
+## Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [NodeJS < v.16](https://nodejs.org/en/)
+- [NPM (**version 8.15.0**)](https://www.npmjs.com/)
+- [REACT (**version 18.2.0**)](https://en.reactjs.org/) 
+- [VSCODE (**version 1.73.1**)](https://code.visualstudio.com/)
 
-### `npm run build`
+If you are working with several versions of NodeJS, we recommend you install [nvm](https://github.com/nvm-sh/nvm). This tool will allow you to easily manage your NodeJS versions.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Run the `yarn` or `npm` command will allow you to install the dependencies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Project setup
 
-### `npm run eject`
+- Fork and clone the repository on your computer.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+````bash
+git clone https://github.com/DevWamy/P13_ArgentBank.git
+````
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Package installations after cloning.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+# with NPM
+npm install
+# with Yarn
+yarn
+```
+- Install and run MongoDb
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+- Start the application
+ 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+For backend :
+open a new terminal and run `cd BackEnd` command,
+then run npm run dev:server `npm run dev:server`command 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+then open another new terminal and run `cd BackEnd` command,
+then run `npm run populate-db`
 
-### Code Splitting
+the backend will open http://localhost:3001
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+For frontEnd :
+open a new terminal, `cd FrontEnd` then run the `npm start`
+or `npm start` or `yarn start ` with Yarn .
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+It will allow you to run the application on http://localhost:3000
+ 
 
-### Making a Progressive Web App
+### Added dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/DevWamy/P13_ArgentBank/axios?color=blueviolet)
+- ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/DevWamy/P13_ArgentBank/react?color=ff64b2)
+- ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/DevWamy/P13_ArgentBank/react-router-dom?color=blueviolet)
+- ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/DevWamy/P13_ArgentBank/redux?color=ff64b2)
+- ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/DevWamy/P13_ArgentBank/react-redux?color=blueviolet)
+- ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/DevWamy/P13_ArgentBank/react-icons?color=ff64b2)
+- ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/DevWamy/P13_ArgentBank/react-scripts?color=blueviolet)
+- ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/DevWamy/P13_ArgentBank/sass?color=ff64b2)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Backend
+
+[Link to backend repository](https://github.com/DevWamy/Project-10-Bank-API)

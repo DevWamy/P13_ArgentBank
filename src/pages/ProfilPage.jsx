@@ -24,8 +24,13 @@ const Profil = () => {
     // const navigate = useNavigate();
     const dispatch = useDispatch();
 
+<<<<<<< HEAD
     //On récupère le token
     const token = useSelector((state) => state.token);
+=======
+    // //On récupère le token
+    // const token = useSelector((state) => state.setToken);
+>>>>>>> e1c1d47eb0b9cfc1fe36dd15b679fa828fc72782
 
     // // si il n'y à pas de token = pas d'user => on redirige verse la page login
     // useEffect(() => {
@@ -51,6 +56,7 @@ const Profil = () => {
 
         // requete post pour envoyer le nom et prenom
         axios
+<<<<<<< HEAD
             .put(
                 'http://localhost:3001/api/v1/user/profile',
                 {
@@ -62,6 +68,13 @@ const Profil = () => {
                 { headers: { Authorization: `Bearer ${token}` } },
             )
             //useSelector recup token meme chose que bearers.
+=======
+            .put('http://localhost:3001/api/v1/user/profile', {
+                // l'api attend un firstname et lastname on lui passe ceux des champs du formulaire
+                firstName: updateFirstName,
+                lastName: updateLastName,
+            })
+>>>>>>> e1c1d47eb0b9cfc1fe36dd15b679fa828fc72782
             .then((response) => {
                 // on appelle la fonction "updateUser" du user reducer qui change le nom / prenom
                 dispatch(authActions.updateUser(response.data.body));
