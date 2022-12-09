@@ -1,39 +1,39 @@
 import React from 'react';
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
-import { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { authActions } from '../store/authSlice';
 import AccountItem from '../components/AccountItem';
 
 /**
  * Display the profile page with account elements and access to edit form.
+ *
  * @params useSelector allows to extract data from the state of the store, using a selection function.
  * Used here to extract datas that are in the first and last name state.
  * @params useDispatch returns a dispatch function allowing actions to be dispatched to the store's reducer.
  * @params useState is used to store data.
  * @params authActions is needed for the various slice actions that are in the store.
-//  * @params navigate is used for navigate to other pages.
+ * @params navigate is used for navigate to other pages.
  * @params e.preventDefault removes the default behavior of the element in which it is called.
  * @params axios is used to do some requests.
  * @params charAt toUpperCase is used to have the first letter of the name and first name capitalized.
  *
- * @returns {JSX.Element} Profile component
+ * @returns {JSX.Element} Profile page.
  */
 const Profil = () => {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
     const dispatch = useDispatch();
 
     //On récupère le token
     const token = useSelector((state) => state.token);
 
-    // // si il n'y à pas de token = pas d'user => on redirige verse la page login
-    // useEffect(() => {
-    //     if (!token) {
-    //         navigate('/login');
-    //     }
-    //     navigate('/ProfilPage');
-    // }, [token, navigate]);
+    // Si il n'y a pas de token = pas d'user => on redirige verse la page login
+    useEffect(() => {
+        if (!token) {
+            navigate('/LoginPage');
+        }
+    }, [token, navigate]);
 
     //Edition du formulaire
     const [editNameForm, setEditNameForm] = useState(false);
@@ -42,14 +42,14 @@ const Profil = () => {
         setEditNameForm(!editNameForm);
     };
 
-    //form values
+    //Form values
     const [updateFirstName, setUpdateFirstName] = useState('');
     const [updateLastName, setUpdateLastName] = useState('');
 
     const onSave = (e) => {
         e.preventDefault();
 
-        // requete post pour envoyer le nom et prenom
+        // Requete post pour envoyer le nom et prenom
         axios
             .put(
                 'http://localhost:3001/api/v1/user/profile',
@@ -58,7 +58,7 @@ const Profil = () => {
                     firstName: updateFirstName,
                     lastName: updateLastName,
                 },
-                // On modifie les autorisations avec le token. DEFINITION A REVOIR
+                // On modifie les autorisations avec le token.
                 { headers: { Authorization: `Bearer ${token}` } },
             )
             //useSelector recup token meme chose que bearers.
@@ -76,10 +76,12 @@ const Profil = () => {
     };
 
     const firstName = useSelector(
-        (state) => state.firstName.charAt(0).toUpperCase() + state.firstName.slice(1),
+        (state) => state.firstName && state.firstName.charAt(0).toUpperCase() + state.firstName.slice(1),
     );
 
-    const lastName = useSelector((state) => state.lastName.charAt(0).toUpperCase() + state.lastName.slice(1));
+    const lastName = useSelector(
+        (state) => state.lastName && state.lastName.charAt(0).toUpperCase() + state.lastName.slice(1),
+    );
 
     return (
         <div className="main bgDark">

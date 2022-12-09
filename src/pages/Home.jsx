@@ -3,9 +3,9 @@ import Banner from '../components/Banner';
 import Features from '../components/Features';
 
 /**
- * Display the Home page with Banner and Features
+ * Display the Home page with Banner and Features.
  *
- * @returns {JSX.Element} Home component
+ * @returns {JSX.Element} Home page.
  */
 
 const Home = () => {

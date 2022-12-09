@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /**
- * Creation of a feature item for the profile page
+ * Creation of a feature item for the profile page.
  *
- * @returns {JSX.Element} feature component
+ * @returns {JSX.Element} featureItem component.
  */
 const Feature = ({ image, title, text }) => {
     return (

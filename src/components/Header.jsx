@@ -14,17 +14,17 @@ import logo from '../img/argentBankLogo.png';
  * @params dispatch takes the action as a parameter. This is returned by the execution of the corresponding function.
  * @params authActions is needed for the various slice actions that are in the store.
  *
- * @returns {JSX.Element} Navigation component
+ * @returns {JSX.Element} Navigation component.
  */
 
 const Header = () => {
     const firstName = useSelector((state) => state.firstName);
 
-    // fonction logout
+    // Fonction logout
     const handleLogout = () => {
         const dispatch = useDispatch;
 
-        // On appelle la fonction du reducer "logout" qui passera les données user à null
+        // On appelle la fonction du reducer "logout" qui passera les données user à null.
         dispatch(authActions.logout());
     };
 

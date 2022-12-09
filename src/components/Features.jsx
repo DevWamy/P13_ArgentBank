@@ -5,9 +5,9 @@ import Money from '../img/icon-money.png';
 import Security from '../img/icon-security.png';
 
 /**
- * Creation of the features component
+ * Creation of the features component.
  *
- * @returns {JSX.Element}
+ * @returns {JSX.Element} feature component.
  */
 const Features = () => {
     return (

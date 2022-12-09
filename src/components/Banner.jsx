@@ -1,9 +1,9 @@
 import React from 'react';
 
 /**
- * Creation of the home banner with an image and desciption
- * @component
- * @returns {JSX.Element} banner component
+ * Creation of the home banner with an image and desciption.
+ *
+ * @returns {JSX.Element} Banner component.
  */
 const Banner = () => {
     return (

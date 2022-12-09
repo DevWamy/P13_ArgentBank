@@ -5,7 +5,7 @@ import { FaUserCircle } from 'react-icons/fa';
 /**
  * Display the login page with the login form.
  *
- * @returns {JSX.Element} LoginPage component
+ * @returns {JSX.Element} Login page.
  */
 const LoginPage = () => {
     return (

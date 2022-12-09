@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /**
- * Creation of AccountItem component
+ * Creation of AccountItem component.
  *
- * @returns {JSX.Element}
+ * @returns {JSX.Element} AccountItem component.
  */
 
 const AccountItem = ({ title, amount, description }) => {

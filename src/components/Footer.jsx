@@ -1,9 +1,9 @@
 import React from 'react';
 
 /**
- * Creation of the footer
+ * Creation of the footer.
  *
- * @returns {JSX.Element} footer component
+ * @returns {JSX.Element} footer component.
  */
 const Footer = () => {
     return (

@@ -36,32 +36,31 @@ const LoginForm = () => {
                 password,
             })
             .then((response) => {
-                // On modifie les autorisations avec le token. DEFINITION A REVOIR
-                // axios.defaults.headers['Authorization'] = `Bearer ${response.data.body.token}`;
-
-                // On récupère le token
+                // On récupère le token.
                 dispatch(authActions.setToken(response.data.body));
 
-                // requete pour récuperer les données de l'utilisateur
+                // Requete pour récuperer les données de l'utilisateur.
                 axios
                     .post(
                         'http://localhost:3001/api/v1/user/profile',
                         {},
-                        // On modifie les autorisations avec le token. DEFINITION A REVOIR
+                        // On modifie les autorisations avec le token.
                         { headers: { Authorization: `Bearer ${response.data.body.token}` } },
                     )
                     .then((response) => {
-                        // on appelle la fonction "login" du user reducer
+                        // On appelle la fonction "login" du user reducer.
                         dispatch(authActions.login(response.data.body));
 
-                        // on redirige sur la page profil
+                        // On redirige sur la page profil.
                         navigate('/ProfilPage');
 
-                        //On affiche le token
+                        //On affiche le token.
                         console.log('Voici le token: ' + localStorage.userToken);
                     });
             })
+            //On récupère l'erreur si il y en a une.
             .catch((err) => {
+                // Et on l'affiche dans une alerte.
                 alert(err.response.data.message);
             });
     };
