@@ -18,7 +18,6 @@ const initialState = {
     token: null,
     email: null,
     password: null,
-    // remember: false, //A gerer plus tard
     isAuth: false,
 };
 

@@ -55,8 +55,8 @@ const Profil = () => {
                 'http://localhost:3001/api/v1/user/profile',
                 {
                     // l'api attend un firstname et lastname on lui passe ceux des champs du formulaire
-                    firstName: updateFirstName,
-                    lastName: updateLastName,
+                    firstName: updateFirstName ? updateFirstName : firstName,
+                    lastName: updateLastName ? updateLastName : lastName,
                 },
                 // On modifie les autorisations avec le token.
                 { headers: { Authorization: `Bearer ${token}` } },
