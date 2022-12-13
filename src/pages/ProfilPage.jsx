@@ -96,8 +96,8 @@ const Profil = () => {
                                 id="firstName"
                                 name="firstName"
                                 placeholder={firstName}
-                                required
                                 onChange={(e) => setUpdateFirstName(e.target.value)}
+                                required
                             />
                             <label htmlFor="lastName"></label>
                             <input
